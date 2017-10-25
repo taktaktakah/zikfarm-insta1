@@ -1,16 +1,22 @@
-<h1>Posts Index</h1>
-
-<a href="/posts/new">New</a>
-
-<div>
-  <% @posts.each do |post| %>
-
-    <div>
-      <a href="/posts/<%= post.id %>">
-        <%= post.content %>
-      </a>
-    </div>
+<div class="container">
   
-  <% end %>
+  <h1>Posts Index</h1>
+
+  <a href="/posts/new">New</a>
+  
+  <div class="row">
+    <% @posts.each do |post| %>
+  
+      <div class="col-4">
+        <a href="/posts/<%= post.id %>">
+          <img src="<%= post.image.url %>" class="img-fluid">
+        </a>
+      </div>
+    
+    <% end %>
+  </div>
+  
 </div>
+
+
   

@@ -1,5 +1,8 @@
 <a href="/posts/<%= @post.id %>/edit">Edit</a>
 
 <div>
+  <img src="<%= @post.image.url %>">
   <%= @post.content %>
 </div>
+
+<a href="/posts/<%= @post.id %>" data-method="delete">Delete</a>

@@ -1,6 +1,7 @@
 <h1>New Post</h1>
 
-<form action="/posts" method="post">
+<form action="/posts" method="post" enctype='multipart/form-data'>
+  Image: <input type="file" name="image"><br>
   Content: <input type="text" name="content"><br>
   <input type="submit" value="Save">
 </form>

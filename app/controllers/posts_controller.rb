@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   
   def create
     post = Post.new
+    post.image = params[:image]
     post.content = params[:content]
     post.save
     
@@ -33,7 +34,10 @@ class PostsController < ApplicationController
   end
   
   def destroy
+    post = Post.find(params[:id])
+    post.destroy
     
+    redirect_to "/posts"
   end
     
 end
