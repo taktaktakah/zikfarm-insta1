@@ -1,12 +1,17 @@
 Rails.application.routes.draw do
   # RESTful
-  get 'posts' => 'posts#index'
-  get 'posts/new' => 'posts#new'
-  get 'posts/:id' => 'posts#show'
-  post 'posts' => 'posts#create'
-  get 'posts/:id/edit' => 'posts#edit'
-  put 'posts/:id' => 'posts#update'
-  delete 'posts/:id' => 'posts#destroy'
+  # get 'posts' => 'posts#index'
+  # get 'posts/new' => 'posts#new'
+  # get 'posts/:id' => 'posts#show'
+  # post 'posts' => 'posts#create'
+  # get 'posts/:id/edit' => 'posts#edit'
+  # put 'posts/:id' => 'posts#update'
+  # delete 'posts/:id' => 'posts#destroy'
+  
+  root 'posts#index'
+  #시작페이지를 잡아주는 명령어
+  resources :posts
+  #위에 일곱줄을 한줄로 표현
   
   
   
