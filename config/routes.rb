@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   # RESTful
   # get 'posts' => 'posts#index'
   # get 'posts/new' => 'posts#new'
@@ -10,6 +11,7 @@ Rails.application.routes.draw do
   
   root 'posts#index'
   #시작페이지를 잡아주는 명령어
+  get 'mypage' => 'posts#mypage', as: :mypage #=> mypage_path
   resources :posts
   #위에 일곱줄을 한줄로 표현
   
